@@ -1,3 +1,0 @@
-"""
-buat dump pickle
-"""
