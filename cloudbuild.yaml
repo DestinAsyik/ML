@@ -9,7 +9,7 @@ steps:
       - '-c'
       - |
         # Ambil service key dari Secret Manager
-        gcloud secrets versions access latest --secret=credentials > /workspace/destinasyik-ML.json
+        gcloud secrets versions access latest --secret=ML > /workspace/destinasyik-ML.json
 
   # Step 2: Build Docker image
   - name: 'gcr.io/cloud-builders/docker'
