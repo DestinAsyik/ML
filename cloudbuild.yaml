@@ -1,3 +1,6 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 steps:
   # Step 1: Akses Service Key dari Secret Manager
   - name: 'gcr.io/cloud-builders/gcloud'
