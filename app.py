@@ -79,4 +79,4 @@ def recommend_collaborative(request: CollaborativeRequest, n_recommendations: in
     
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(debug=True)
+    uvicorn.run(app, host="0.0.0.0", port=8080)
