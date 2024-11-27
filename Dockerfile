@@ -4,9 +4,10 @@ FROM python:3.10-slim
 # Atur direktori kerja di container
 WORKDIR /app
 
+
 # Salin file requirements.txt dan install dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 # Salin semua file proyek ke dalam container
 COPY . .
