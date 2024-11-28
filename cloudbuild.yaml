@@ -41,5 +41,6 @@ steps:
       - '--set-env-vars'
       - 'GOOGLE_APPLICATION_CREDENTIALS=/app/destinasyik-ML.json'
 
+# service
 substitutions:
   _SERVICE_NAME: 'destinasyikreccomenders-service'
