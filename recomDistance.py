@@ -19,7 +19,7 @@ def haversine(lat1, lon1, lat2, lon2):
     distance = R * c
     return distance
 
-def getTempatTerdekat(user_lat, user_long, data, top_n=10):
+def getTempatTerdekat(user_lat, user_long, data, top_n=15):
     data['distance_km'] = data.apply(lambda row: haversine(user_lat, user_long, row['latitude'], row['longitude']), axis=1)
     nearest_places = data.sort_values(by='distance_km').head(top_n)
     return nearest_places

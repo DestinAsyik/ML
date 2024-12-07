@@ -15,7 +15,7 @@ cosineSim = pd.DataFrame(cosine_similarity(categoryEncoded), index=destination.i
 with open('models/cosineSim.pkl', 'wb') as file:
     pickle.dump(cosineSim, file)
 
-def getRecommendationsByCategory(selected_category, destination, cosineSim, top_n=10):
+def getRecommendationsByCategory(selected_category, destination, cosineSim, top_n=15):
     category_indices = destination[destination['category'] == selected_category].index
 
     if category_indices.empty:
