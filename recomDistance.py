@@ -2,7 +2,7 @@ import pandas as pd
 from math import radians, sin, cos, sqrt, atan2
 import pickle
 
-destination = pd.read_csv('./data/destinasiWisata.csv')
+destination = pd.read_csv('./data/destinasiDB.csv')
 
 destination['latitude'] = destination['latitude'].apply(lambda x: float(str(x).replace("'", "").replace("{", "").replace("}", "").split(':')[-1].strip()))
 destination['longitude'] = destination['longitude'].apply(lambda x: float(str(x).replace("'", "").replace("{", "").replace("}", "").split(':')[-1].strip()))
