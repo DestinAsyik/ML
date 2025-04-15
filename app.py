@@ -10,7 +10,6 @@ import pandas as pd
 
 app = FastAPI()
 
-# Load pre-trained models
 with open('models/destination.pkl', 'rb') as file:
     destination = pickle.load(file)
 
@@ -62,7 +61,6 @@ def recommend_collaborative(request: CollaborativeRequest, n_recommendations: in
         user_id = request.user_id
         review_df = pd.DataFrame([review.dict() for review in request.review_data])
 
-        # Validasi jika review_df kosong
         if review_df.empty:
             print("No review data provided. Using fallback logic.")
             recommendations = getColaborative(user_id, model, pd.DataFrame(), n_recommendations)
